@@ -1,7 +1,15 @@
 
 #Data
+<<<<<<< HEAD
 movierec/*.csv
 
+=======
+links.csv
+movies.csv
+ratings.csv
+README.txt
+tags.csv
+>>>>>>> 0ca6d4157a2c6dd034d6c755655ea25502d57f6d
 
 #Junk
 .ipynb_checkpoints
