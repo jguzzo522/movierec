@@ -1,5 +1,9 @@
 #Data
-
+links.csv
+movies.csv
+ratings.csv
+README.txt
+tags.csv
 
 #Junk
 .ipynb_checkpoints
