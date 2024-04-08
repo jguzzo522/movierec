@@ -4,6 +4,7 @@ by Jessica Guzzo
 This project aims to create top 5 movie recommendations for each user of the streaming service. The reason to provide movie recommendations, is to enhance the users experience. It is important to keep the users happy while using this streaming service, because there are many streaming services to choose from. 
 
 In addition this project aims to solve the cold start problem. The cold start problem applies to new users who the company has no historical data about. This cold start problem makes it challenging for companies to personalize movie recommendations, because there is no past history to base the recommendations off of. Its important to solve the cold start problem, so new users are impressed with the streaming service, and enjoy their experience. 
+
 ![glenn-carstens-peters-EOQhsfFBhRk-unsplash](https://github.com/jguzzo522/movierec/assets/75549456/e8a7fc92-b038-4486-a172-91bf87695783)
 
 # Data Understanding
@@ -28,6 +29,7 @@ Missing values were removed from the data set including around 52k missing useri
 
 ## Rating
 To start exploring the data, ratings were initially investigated. The data indicates that the mean rating was close to 4 out of 5, while there as a big standard deviation around 1. The chart below indicates a heavy skew towards users liking movies, more than disliking movies. 
+
 ![Screen Shot 2024-04-06 at 3 54 12 PM](https://github.com/jguzzo522/movierec/assets/75549456/66f23286-e4b1-444c-b565-e23f91f214fa)
 
 ## Genre
