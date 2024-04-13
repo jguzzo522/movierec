@@ -89,6 +89,6 @@ Limitations for the Kmeans clustering analysis for the cold start problem includ
 
 ├── [README.md](README.md)
 
-├── movie rec.pdf
+├── [movierec notebook](movierecnotebook.ipynb).
 
-└── [movierec notebook](movierecnotebook.ipynb).
+└── [movierecslides.pdf](https://github.com/jguzzo522/movierec/blob/main/movierecslides.pdf)
