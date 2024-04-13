@@ -87,7 +87,7 @@ Limitations for the Kmeans clustering analysis for the cold start problem includ
 # Repo Structure
 ├── gitgnore
 
-├── README.md
+├── [README.md](README.md)
 
 ├── movie rec.pdf
 
