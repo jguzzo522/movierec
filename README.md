@@ -84,8 +84,11 @@ Certain features such as 'tags' or 'decade' were not fully analyzed. Moreover, u
 
 Limitations for the Kmeans clustering analysis for the cold start problem include solely analyzing genre and movie rating data. Furthermore, some movies have multiple genres, and only the most relevant genre was assigned to each movie during the analysis, which could impact clustering results. Further analysis could involve combining tags and genres to provide more in-depth insights into the types of movies within each cluster. Similarly, similar to the limitations of the SVD Grid Search method, gathering information about new users such as age, marital status, children status, and occupation could enhance the clustering analysis by providing additional context for movie recommendations. 
 
-=======
-├── .gitignore
+# Repo Structure
+├── gitgnore
+
 ├── README.md
-├── movierec.pdf
+
+├── movie rec.pdf
+
 └── movierecnotebook.ipynb
