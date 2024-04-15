@@ -77,7 +77,8 @@ To recommend movies to a new user, KMeans clustering can be a useful approach. I
 
 KMeans Clustering: The KMeans algorithm is used to cluster movies into different groups based on their genre features. Initially, 10 clusters are created. The elbow method was used to determine the optimal number of clusters. A plot was generated showing the within-cluster sum of squares for different numbers of clusters. Based on the graph the optimal amount of clusters should be around 4-6.
 
-![Screen Shot 2024-04-13 at 10 42 25 AM](https://github.com/jguzzo522/movierec/assets/75549456/43a574e3-3461-4104-8666-959160092000)
+![Screen Shot 2024-04-15 at 5 27 53 PM](https://github.com/jguzzo522/movierec/assets/75549456/f8b5c6ae-e97d-4aa7-992d-b49614125adf)
+
 
 Updated Clustering: Based on the elbow method analysis, the number of clusters is updated to 5, and the clustering process is repeated.
 The clustering analysis reveals distinct groups of movies based on their genre features.
