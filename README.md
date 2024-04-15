@@ -10,7 +10,20 @@ In addition this project aims to solve the cold start problem. The cold start pr
 # Data Understanding
 
 This dataset come from https://grouplens.org/datasets/movielens/latest/ . In this dataset the following columns are present: 
-![Screen Shot 2024-04-06 at 3 36 13 PM](https://github.com/jguzzo522/movierec/assets/75549456/418f1490-5720-43b7-b5e5-6accedf85e66)
+| Column                | Description                                                    |
+|-----------------------|----------------------------------------------------------------|
+| movieId               | Unique identifier for each movie                               |
+| title                 | Title of the movie along with the release year                 |
+| genres                | Genres associated with the movie, separated by '|'            |
+| userId_x              | User ID of the user who provided the rating                    |
+| rating                | Rating given to the movie by the user                          |
+| timestamp_x           | Timestamp when the rating was given by the user                |
+| userId_y              | User ID of the user who applied the tag                        |
+| tag                   | Tag applied to the movie by the user                           |
+| timestamp_y           | Timestamp when the tag was applied by the user                 |
+| imdbId                | IMDb ID of the movie                                            |
+| tmdbId                | TMDb ID of the movie                                            |
+
 
 ## Data Preparation
 
