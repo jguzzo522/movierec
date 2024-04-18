@@ -52,8 +52,8 @@ The next column investigated was genres. Before exploring the data, the genre co
 
 # Modeling
 SVD Grid Search Modeling was conducted to produce 5 movie recommendations per user. Grid search allows for running multiple SVD models with different parameters, such as number of factors and epochs, as well as learning rate, regularization term and bias term. This specific Grid Search was performed to produce the best Root Mean Square Score (RMSE). The grid search performed many combinations of modeling and produced the best single model to provide movie recommendations for the users. After the best model was selected, this model was performed and user recommendations were created. 
+![Screen Shot 2024-04-17 at 9 52 01 PM](https://github.com/jguzzo522/movierec/assets/75549456/832ff485-03a7-4458-8c33-b06be845ea9e)
 
-![Screen Shot 2024-04-07 at 5 42 30 PM](https://github.com/jguzzo522/movierec/assets/75549456/482e8e85-dde5-4ef2-b2e5-dcf639dbc71a)
 
 # Conclusion
 
