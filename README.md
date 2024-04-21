@@ -35,7 +35,7 @@ The four datasets were merged o 'movieId', so the data could be fully explored. 
 
 The year column was condensed into a decade column. This made the visualization of movie trends easier to interpret. 
 
-Missing values were removed from the data set including around 52k missing userid_y, tag, and timestamp_y values. Prior to these rows being removed the dataset had 285,762 values, after removal of the missing data there were 233,213 rows.
+Missing values were removed from the data set including around 52k missing userid, tag, and timestamp values. Prior to these rows being removed the dataset had 285,762 values, after removal of the missing data there were 233,213 rows.
 
 
 # Exploratory Data Analysis
@@ -43,7 +43,8 @@ Missing values were removed from the data set including around 52k missing useri
 ## Rating
 To start exploring the data, ratings were initially investigated. The data indicates that the mean rating was close to 4 out of 5, while there as a big standard deviation around 1. The chart below indicates a heavy skew towards users liking movies, more than disliking movies. 
 
-![Screen Shot 2024-04-06 at 3 54 12 PM](https://github.com/jguzzo522/movierec/assets/75549456/66f23286-e4b1-444c-b565-e23f91f214fa)
+![Screen Shot 2024-04-20 at 10 54 53 AM](https://github.com/jguzzo522/movierec/assets/75549456/d7a55b16-9a5e-4051-8e5a-1f0145c45968)
+
 
 ## Genre
 The next column investigated was genres. Before exploring the data, the genre column had to undergo dummy variable conversion. This conversion changes a categorical variable into a numerical variable. This type of conversion allows for advance modeling to analyze genres importance on recommending movies. In addition to creating dummy variables, we also split the genres so there were no combination genres. Each movie only had a single genre after this split. This created 19 different genres which were 'Action', 'Adventure',
@@ -52,6 +53,7 @@ The next column investigated was genres. Before exploring the data, the genre co
 
 # Modeling
 SVD Grid Search Modeling was conducted to produce 5 movie recommendations per user. Grid search allows for running multiple SVD models with different parameters, such as number of factors and epochs, as well as learning rate, regularization term and bias term. This specific Grid Search was performed to produce the best Root Mean Square Score (RMSE). The grid search performed many combinations of modeling and produced the best single model to provide movie recommendations for the users. After the best model was selected, this model was performed and user recommendations were created. 
+
 ![Screen Shot 2024-04-17 at 9 52 01 PM](https://github.com/jguzzo522/movierec/assets/75549456/832ff485-03a7-4458-8c33-b06be845ea9e)
 
 
