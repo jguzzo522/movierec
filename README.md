@@ -1,7 +1,7 @@
 # Business Understanding
 by Jessica Guzzo
 
-This project aims to create top 5 movie recommendations for each user of the streaming service. The reason to provide movie recommendations, is to enhance the users experience. It is important to keep the users happy while using this streaming service, because there are many streaming services to choose from. 
+This project aims to create top 5 movie recommendations for each user of the streaming service. The reason to provide movie recommendations, is to enhance the users experience. It is important to keep the users happy while using this streaming service, because there are many streaming services to choose from. Hopefully by providing good movie recommendations, this will limit user fatigue, and increase user subscription.
 
 In addition this project aims to solve the cold start problem. The cold start problem applies to new users who the company has no historical data about. This cold start problem makes it challenging for companies to personalize movie recommendations, because there is no past history to base the recommendations off of. Its important to solve the cold start problem, so new users are impressed with the streaming service, and enjoy their experience. 
 
@@ -31,7 +31,7 @@ Packages such as Pandas, Numpy, Matplotlib, Surprise, Scikit-learn, and Scipy we
 
 Once the packages were loaded, the four datasets were imported, and an empty dictionary was created to store all four DataFrames. Exploration of the datasets began by reviewing the number of rows and columns, as well as printing out the first 5 data points from each dataset.
 
-The four datasets were merged o 'movieId', so the data could be fully explored. There were a total number of 9,742 movies, from a total number of 233,213 users.  Ratings of movies ranged from 0.5 to 5. In the  genres column there were many types of genres, and most movies had overlapping genres. 
+The four datasets were merged o 'movieId', so the data could be fully explored. There were a total number of 9,742 movies, from a total number of 610 users.  Ratings of movies ranged from 0.5 to 5. In the  genres column there were many types of genres, and most movies had overlapping genres. 
 
 The year column was condensed into a decade column. This made the visualization of movie trends easier to interpret. 
 
@@ -54,7 +54,7 @@ The next column investigated was genres. Before exploring the data, the genre co
 # Modeling
 SVD Grid Search Modeling was conducted to produce 5 movie recommendations per user. Grid search allows for running multiple SVD models with different parameters, such as number of factors and epochs, as well as learning rate, regularization term and bias term. This specific Grid Search was performed to produce the best Root Mean Square Score (RMSE). The grid search performed many combinations of modeling and produced the best single model to provide movie recommendations for the users. After the best model was selected, this model was performed and user recommendations were created. 
 
-![Screen Shot 2024-04-17 at 9 52 01 PM](https://github.com/jguzzo522/movierec/assets/75549456/832ff485-03a7-4458-8c33-b06be845ea9e)
+One example of how this would work looks into a random User 601. The user's top 2 rated movies include two Sci-Fi movies Intersteller and Inception. The top movie reccommendation was Starwars, which is also a Sci-Fi movie. This is just one example of how this modeling would work.
 
 
 # Conclusion
@@ -77,7 +77,7 @@ In addition this type of modeling would be ineffective at producing movie recomm
 ## KMeans Modeling for Cold Start Problem
 To recommend movies to a new user, KMeans clustering can be a useful approach. In this analysis, clustering techniques are applied to group movies based on their genre features. This approach can be useful for various purposes, such as understanding movie similarities, recommending similar movies, or targeting specific audiences.
 
-KMeans Clustering: The KMeans algorithm is used to cluster movies into different groups based on their genre features. Initially, 10 clusters are created. The elbow method was used to determine the optimal number of clusters. A plot was generated showing the within-cluster sum of squares for different numbers of clusters. Based on the graph the optimal amount of clusters should be around 4-6.
+KMeans Clustering: The KMeans algorithm is used to cluster movies into different groups based on their genre features. Initially, 10 clusters are created. The elbow method was used to determine the optimal number of clusters. A plot was generated showing the within-cluster sum of squares for different numbers of clusters. Based on the graph the optimal amount of clusters should be 4.
 
 ![Screen Shot 2024-04-15 at 5 27 53 PM](https://github.com/jguzzo522/movierec/assets/75549456/f8b5c6ae-e97d-4aa7-992d-b49614125adf)
 
@@ -87,7 +87,28 @@ The clustering analysis reveals distinct groups of movies based on their genre f
 
 ![Screen Shot 2024-04-13 at 10 43 12 AM](https://github.com/jguzzo522/movierec/assets/75549456/20195c78-cde8-4a2c-ad18-3c85f0f97cbc)
 
-Recommendations for new users can be tailored based on the identified clusters, suggesting movies similar to those already popular within each cluster. These movie clusters allow for movies to have multiple genres, for instance cluster one is mainly a mixture of action, adventure, sci-fi and thriller movies. While cluster 2 is a mixture of comedy, crime and romance movies.
+## Exploring the 4 Movie Clusters 
+
+Centroid values indicate the strength of association in a cluster. High values closer to 1 represent a strong association. 
+
+Cluster 0: Adventure Child Friendly Movies
+
+This cluster is strongly associated with Adventure (0.73) and Children (0.73) movies. The cluster also has strong connections with Fantasy (0.60), Animation (0.58) and Comedy(0.56) genres. 
+
+
+Cluster 1: Dramatic Movies
+
+This cluster is strongly associated with Drama (0.82). It has a smaller association with Thrillers (0.35), and Crime (0.25)
+
+Cluster 2: Comedy and Romance
+
+This cluster has a very strong association with Comedies (0.99). This cluster also as an association with Romance (0.33), and Drama (0.29).
+
+
+Cluster 3: Thrilling Action Movies
+
+This Cluster has a strong association with Action (0.92) movies. It also has a strong connection to Adventure (0.52), Sci-Fi (0.52), and Thriller (0.51).
+
 
 There are limitations to KMeans clustering, similary to the SVD grid search, it would be useful to obtain more user data to help predict what users would be interested in viewing. To start when people sign up for the streaming service, it may be useful to gather their sign up data such as age, marriage status, and family status. Knowing this information may be important because a married family with children, may want recommendations that are family oriented, while a single young adult may not want family oriented movies. 
 
