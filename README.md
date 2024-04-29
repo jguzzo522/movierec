@@ -41,7 +41,7 @@ Missing values were removed from the data set including around 52k missing useri
 # Exploratory Data Analysis
 
 ## Rating
-To start exploring the data, ratings were initially investigated. The data indicates that the mean rating was close to 4 out of 5, while there as a big standard deviation around 1. The chart below indicates a heavy skew towards users liking movies, more than disliking movies. 
+To start exploring the data, ratings were initially investigated. The data indicates that the mean rating was close to 3.5 out of 5, while there as a big standard deviation around 1. The chart below indicates a heavy skew towards users liking movies, more than disliking movies. 
 
 ![Screen Shot 2024-04-20 at 10 54 53 AM](https://github.com/jguzzo522/movierec/assets/75549456/d7a55b16-9a5e-4051-8e5a-1f0145c45968)
 
@@ -54,15 +54,15 @@ The next column investigated was genres. Before exploring the data, the genre co
 # Modeling
 SVD Grid Search Modeling was conducted to produce 5 movie recommendations per user. Grid search allows for running multiple SVD models with different parameters, such as number of factors and epochs, as well as learning rate, regularization term and bias term. This specific Grid Search was performed to produce the best Root Mean Square Score (RMSE). The grid search performed many combinations of modeling and produced the best single model to provide movie recommendations for the users. After the best model was selected, this model was performed and user recommendations were created. 
 
-One example of how this would work looks into a random User 601. The user's top 2 rated movies include two Sci-Fi movies Intersteller and Inception. The top movie reccommendation was Starwars, which is also a Sci-Fi movie. This is just one example of how this modeling would work.
+One example of how this would work looks into a random User 93. One of the users top rated movies was Jumanji (1995), which is a children’s adventure movie, that partially takes places in a jungle, and has many wild animals. The model recommended Jungle Book(1994), which is also a children, adventure movie that takes place in a jungle with wild animals.
 
 
 # Conclusion
 
 ## Evaluation of SVD Grid Search
-Streaming services should use SVD (Singular Value Decomposition) Grid Search modeling to produce user movie recommendations. The model produced an RMSE (Root Mean Square Error) of 0.38 and a MAE (Mean Absolute Error) of 0.24, indicating that, on average, the predicted ratings deviate from the actual user ratings by a small margin. This suggests a high level of accuracy in the recommendations provided to the users.
+Streaming services should use SVD (Singular Value Decomposition) Grid Search modeling to produce user movie recommendations. The model produced an RMSE (Root Mean Square Error) of 0.83 and a MAE (Mean Absolute Error) of 0.657, indicating that, on average, the predicted ratings deviate from the actual user ratings by a small margin. This suggests a high level of accuracy in the recommendations provided to the users.
 
-The F1 score is close to about 0.4226, which indicates a moderate balance between precision and recall. This model had an extreme precision of 0.98, indicating that the model will identify relevant movie recommendations 98% of the time. However, its average recall of 0.34 indicates it identifies relevant movies only 34% of the time from the entire pool of movies that a user would find relevant. This suggests that while the movies recommended by the system are highly likely to be hits when they do match a user's preferences, the system fails to capture and recommend a significant proportion of movies that users would enjoy. 
+The F1 score is close to about 0.650, which indicates a moderate balance between precision and recall. This model had an extreme precision of 0.81, indicating that the model will identify relevant movie recommendations 81% of the time. However, its average recall of 0.53 indicates it identifies relevant movies only 53% of the time from the entire pool of movies that a user would find relevant. This suggests that while the movies recommended by the system are highly likely to be hits when they do match a user's preferences, the system fails to capture and recommend a significant proportion of movies that users would enjoy. 
 
 Due to the skew of positive ratings in this entire dataset, most movies would be enjoyable for a user, so there are more opportunities for the model to miss movie recommendations.
 
@@ -79,13 +79,14 @@ To recommend movies to a new user, KMeans clustering can be a useful approach. I
 
 KMeans Clustering: The KMeans algorithm is used to cluster movies into different groups based on their genre features. Initially, 10 clusters are created. The elbow method was used to determine the optimal number of clusters. A plot was generated showing the within-cluster sum of squares for different numbers of clusters. Based on the graph the optimal amount of clusters should be 4.
 
-![Screen Shot 2024-04-15 at 5 27 53 PM](https://github.com/jguzzo522/movierec/assets/75549456/f8b5c6ae-e97d-4aa7-992d-b49614125adf)
+![Screen Shot 2024-04-28 at 8 03 05 PM](https://github.com/jguzzo522/movierec/assets/75549456/f024bb67-10a0-4532-aa63-a5fc57a02d48)
 
 
 Updated Clustering: Based on the elbow method analysis, the number of clusters is updated to 5, and the clustering process is repeated.
 The clustering analysis reveals distinct groups of movies based on their genre features.
 
-![Screen Shot 2024-04-13 at 10 43 12 AM](https://github.com/jguzzo522/movierec/assets/75549456/20195c78-cde8-4a2c-ad18-3c85f0f97cbc)
+![Screen Shot 2024-04-28 at 8 04 49 PM](https://github.com/jguzzo522/movierec/assets/75549456/8d7f5ab8-a3d6-46d7-8594-501d2ca74cc6)
+
 
 ## Exploring the 4 Movie Clusters 
 
